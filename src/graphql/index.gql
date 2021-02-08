@@ -1,0 +1,4 @@
+type Query {
+    users: [User]
+    type_users: [TypeUser]
+}

@@ -18,7 +18,7 @@
     "module": true
   },
   "rules": { 
-    "no-console": 1,
+    "no-console": 0,
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": 1,
     "prettier/prettier": [

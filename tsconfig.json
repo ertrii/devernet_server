@@ -14,15 +14,16 @@
     "isolatedModules": true,
     "esModuleInterop": true
   },
-  "compileOnSave": true,
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts",
-    "lib",
-    "dist",
-    "types"
+    "compileOnSave": true,
+    "include": [
+        "src",
+        "graphql.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts",
+        "lib",
+        "dist",
+        "types"
   ]
 }

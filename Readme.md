@@ -1,23 +1,21 @@
-Typescript Template
+Devenet Server
 =========
+
+## Install 
+
+Create `.env` file and copy of `env.template` and write his values.
 
 ```
 npm install
+npm run dev
 ```
 
-* typescript
-* jest
-* eslint
-* prettier
+## Sources
 
+* [Typescript: Graphql fix import modules](https://github.com/apollographql/graphql-tag/issues/59)
+#### GraphQL for server:
+* [GraphQL Import Node](https://github.com/ardatan/graphql-import-node)
 
-## Scripts
-
-| script |  description  |
-|--------|---------------|
-| `test`   | run test |
-| `test:watch`   | run test watch |
-| `dev`   | node typescript |
-| `lint`  | linter |
-| `build`  | build |
-| `publish:lib`  | running all script then publish in npm. Remember to login first and assign a name and version in the package.|
+#### GraphQL for client:
+* [GraphQL Loader](https://apollo-angular.com/docs/recipes/webpack/)
+* [How to resolve import for the .graphql file with typescript and webpack - DEV Community](https://dev.to/open-graphql/how-to-resolve-import-for-the-graphql-file-with-typescript-and-webpack-35lf)
