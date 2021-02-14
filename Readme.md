@@ -1,4 +1,4 @@
-Devenet Server
+Devernet Server
 =========
 
 ## Install 

@@ -1,8 +1,8 @@
+require('dotenv').config()
 import express, { Express } from 'express'
 import apollo from './apollo'
-require('dotenv').config()
-const PORT = process.env.PORT || 8080
-
+import { PORT } from './config/constants'
+import './config/db'
 const app: Express = express()
 const { graphqlPath } = apollo(app)
 
