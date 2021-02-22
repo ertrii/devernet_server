@@ -1,17 +1,19 @@
 import { PGDATABASE, PGHOST, PGPASSWORD, PGPORT, PGUSER } from './constants'
-import { Pool } from 'pg'
+import { Sequelize } from 'sequelize'
 
-const pool = new Pool({
-    user: PGUSER,
-    host: PGHOST,
-    database: PGDATABASE,
-    password: PGPASSWORD,
-    port: PGPORT
-})
+const sequelize = new Sequelize(
+    `postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}:${PGPORT}/${PGDATABASE}`
+)
 
-pool.query('SELECT NOW()', (err, res) => {
-    console.log(err, res.rows)
-    pool.end()
-})
+sequelize
+    .authenticate()
+    .then(() => {
+        console.log('Connection has been established successfully')
+    })
+    .catch((error) => {
+        console.error('Unable to connect to the database:', error)
+    })
 
-export { pool }
+sequelize.sync()
+
+export default sequelize

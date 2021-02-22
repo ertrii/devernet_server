@@ -1,0 +1,13 @@
+type Brand {
+    id: ID
+    name: String
+    image_url: String
+    deleted: Boolean
+    createdAt: String
+    updatedAt: String
+}
+
+input IntoBrand {
+    name: String!
+    image_url: String!
+}

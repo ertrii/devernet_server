@@ -1,12 +1,31 @@
+enum UserType {
+    admin
+    client
+    technical
+}
+
 type User {
     id: ID
     name: String
     lastname: String
-    phone: String
     email: String
     username: String
+    address: String
+    phone_number: String
     password: String
-    created_at: String
-    updated_at: String
+    user_type: UserType
+    createdAt: String
+    updatedAt: String
     deleted: Boolean
+}
+
+input IntoUser {
+    name: String
+    lastname: String
+    email: String
+    username: String
+    address: String
+    phone_number: String
+    password: String
+    user_type: UserType
 }

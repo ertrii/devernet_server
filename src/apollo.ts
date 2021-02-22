@@ -1,16 +1,17 @@
 import 'graphql-import-node'
 import { Express } from 'express'
 import { ApolloServer, IResolvers } from 'apollo-server-express'
-import { Query } from './resolvers'
+import { Query, Mutation } from './resolvers'
 import { DocumentNode } from 'graphql'
 import main from './graphql/index.gql'
 
 const resolvers: IResolvers = {
-    Query
+    Query,
+    Mutation
 }
 
 const typeDefs: Array<DocumentNode> = [main]
-for (const fieldname of ['user', 'type_user']) {
+for (const fieldname of ['user', 'brand']) {
     typeDefs.push(require(`./graphql/${fieldname}.gql`))
 }
 
