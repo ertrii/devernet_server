@@ -1,12 +1,10 @@
-type DataDeleted {
-    id: ID!
-}
-
 type Query {
     user(id: ID!): User
     users: [User]
     brand(id: ID!): Brand
     brands: [Brand]
+    product(id: ID!): Product
+    products: [Product]
 }
 
 type Mutation {
@@ -17,4 +15,12 @@ type Mutation {
     create_brand(into_brand: IntoBrand!): Brand
     update_brand(id: ID!, into_brand: IntoBrand!): Brand
     delete_brand(id: ID!): DataDeleted
+    
+    create_product(into_product: IntoProduct!): Product
+    update_product(id: ID!, into_product: IntoProduct!): Product
+    delete_product(id: ID!): DataDeleted
+}
+
+type DataDeleted {
+    id: ID!
 }

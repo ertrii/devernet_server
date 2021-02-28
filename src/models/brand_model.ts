@@ -1,26 +1,15 @@
-import { DataTypes, Model } from 'sequelize'
-import sequelize from '../config/db'
+import { Model } from 'sequelize'
 import Brand from '../interfaces/brand'
-import { DELETED, ID } from '../utils/data_types_standard'
-const { STRING } = DataTypes
+import { IMAGE_URL, UNIQUE_NAME } from '../utils/data_types_standard'
+import extends_model_init from '../utils/extends_model_init'
+import init_options_standard from '../utils/init_options_standard'
 
 export default class BrandModel extends Model<Brand> {}
 
 BrandModel.init(
-    {
-        id: ID,
-        name: {
-            type: STRING(50),
-            allowNull: false
-        },
-        image_url: {
-            type: STRING,
-            allowNull: false
-        },
-        deleted: DELETED
-    },
-    {
-        modelName: 'brand',
-        sequelize
-    }
+    extends_model_init({
+        name: UNIQUE_NAME,
+        image_url: IMAGE_URL
+    }),
+    init_options_standard('brand')
 )

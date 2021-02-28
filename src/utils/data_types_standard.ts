@@ -10,10 +10,21 @@ export const ID = {
     unique: true
 }
 
+export const UNIQUE_NAME = {
+    type: STRING(50),
+    allowNull: false,
+    unique: true
+}
+
 export const DELETED = {
     type: BOOLEAN,
     allowNull: false,
     defaultValue: false
+}
+
+export const IMAGE_URL = {
+    type: STRING(255),
+    allowNull: false
 }
 
 export const EMAIL = {
@@ -38,6 +49,11 @@ export const PHONE_NUMBER = {
 }
 
 export const PASSWORD = {
-    type: STRING(50),
+    type: STRING,
+    allowNull: false
+}
+
+export const FOREIGN_KEY = {
+    type: BIGINT,
     allowNull: false
 }

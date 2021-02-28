@@ -1,6 +1,6 @@
 export interface Model {
     id?: number
-    createdAt?: string
-    updatedAt?: string
+    created_at?: string
+    updated_at?: string
     deleted?: boolean
 }

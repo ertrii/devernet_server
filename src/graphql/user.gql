@@ -14,8 +14,8 @@ type User {
     phone_number: String
     password: String
     user_type: UserType
-    createdAt: String
-    updatedAt: String
+    created_at: String
+    updated_at: String
     deleted: Boolean
 }
 

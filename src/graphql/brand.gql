@@ -3,8 +3,8 @@ type Brand {
     name: String
     image_url: String
     deleted: Boolean
-    createdAt: String
-    updatedAt: String
+    created_at: String
+    updated_at: String
 }
 
 input IntoBrand {

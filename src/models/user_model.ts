@@ -1,7 +1,8 @@
 import { Model, DataTypes } from 'sequelize'
-import sequelize from '../config/db'
 import User from '../interfaces/user'
-import { ADDRESS, DELETED, EMAIL, ID, PASSWORD, PHONE_NUMBER } from '../utils/data_types_standard'
+import { ADDRESS, EMAIL, PASSWORD, PHONE_NUMBER, UNIQUE_NAME } from '../utils/data_types_standard'
+import extends_model_init from '../utils/extends_model_init'
+import init_options_standard from '../utils/init_options_standard'
 const { STRING, ENUM } = DataTypes
 
 export default class UserModel extends Model<User> {
@@ -11,13 +12,8 @@ export default class UserModel extends Model<User> {
 }
 
 UserModel.init(
-    {
-        id: ID,
-        username: {
-            type: STRING(50),
-            allowNull: false,
-            unique: true
-        },
+    extends_model_init({
+        username: UNIQUE_NAME,
         password: PASSWORD,
         email: EMAIL,
         name: {
@@ -33,11 +29,7 @@ UserModel.init(
         user_type: {
             type: ENUM('admin', 'client', 'technical'),
             allowNull: false
-        },
-        deleted: DELETED
-    },
-    {
-        modelName: 'user',
-        sequelize
-    }
+        }
+    }),
+    init_options_standard('user')
 )

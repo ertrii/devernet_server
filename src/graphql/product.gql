@@ -1,0 +1,17 @@
+type Product {
+    id: ID
+    name: String
+    image_url: String
+    brand_id: ID
+    cost: Float
+    deleted: Boolean
+    created_at: String
+    updated_at: String
+}
+
+input IntoProduct {
+    name: String
+    image_url: String
+    cost: Float
+    brand_id: ID!
+}
