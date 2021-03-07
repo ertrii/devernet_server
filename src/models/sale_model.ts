@@ -1,6 +1,6 @@
 import { Model, DataTypes } from 'sequelize'
 import Sale from '../interfaces/sale'
-import { ID } from '../utils/data_types_standard'
+import { FOREIGN_KEY } from '../utils/data_types_standard'
 import extends_model_init from '../utils/extends_model_init'
 import init_options_standard from '../utils/init_options_standard'
 import ClientModel from './client_model'
@@ -10,8 +10,8 @@ export default class SaleModel extends Model<Sale> {}
 
 SaleModel.init(
     extends_model_init({
-        client_id: ID,
-        product_id: ID,
+        client_id: FOREIGN_KEY,
+        product_id: FOREIGN_KEY,
         pay: {
             type: DECIMAL(3, 2),
             allowNull: false

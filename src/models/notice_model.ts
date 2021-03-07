@@ -1,6 +1,6 @@
 import { Model, DataTypes } from 'sequelize'
 import Notice from '../interfaces/notice'
-import { ID } from '../utils/data_types_standard'
+import { FOREIGN_KEY } from '../utils/data_types_standard'
 import extends_model_init from '../utils/extends_model_init'
 import init_options_standard from '../utils/init_options_standard'
 import UserModel from './user_model'
@@ -18,7 +18,7 @@ NoticeModel.init(
             type: TEXT,
             allowNull: false
         },
-        user_id: ID
+        user_id: FOREIGN_KEY
     }),
     init_options_standard('notice')
 )

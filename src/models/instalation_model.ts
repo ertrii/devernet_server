@@ -1,6 +1,6 @@
 import { Model, DataTypes } from 'sequelize'
 import Instalation from '../interfaces/instalation'
-import { ID } from '../utils/data_types_standard'
+import { FOREIGN_KEY } from '../utils/data_types_standard'
 import extends_model_init from '../utils/extends_model_init'
 import init_options_standard from '../utils/init_options_standard'
 import AntennaModel from './antenna_model'
@@ -12,9 +12,9 @@ export default class InstalationModel extends Model<Instalation> {}
 
 InstalationModel.init(
     extends_model_init({
-        antenna_id: ID,
-        service_id: ID,
-        user_id: ID,
+        antenna_id: FOREIGN_KEY,
+        service_id: FOREIGN_KEY,
+        user_id: FOREIGN_KEY,
         ip: STRING(15),
         commentary: {
             type: STRING(255),

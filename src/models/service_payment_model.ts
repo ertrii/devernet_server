@@ -1,6 +1,6 @@
 import { Model, DataTypes } from 'sequelize'
 import ServicePayment from '../interfaces/service_payment'
-import { ID } from '../utils/data_types_standard'
+import { FOREIGN_KEY } from '../utils/data_types_standard'
 import extends_model_init from '../utils/extends_model_init'
 import init_options_standard from '../utils/init_options_standard'
 import ClientModel from './client_model'
@@ -10,7 +10,7 @@ export default class ServicePaymentModel extends Model<ServicePayment> {}
 
 ServicePaymentModel.init(
     extends_model_init({
-        client_id: ID,
+        client_id: FOREIGN_KEY,
         amount: {
             type: DECIMAL(3, 2),
             allowNull: false
