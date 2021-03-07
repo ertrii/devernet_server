@@ -4,7 +4,7 @@ export default interface ServicePayment extends Model {
     client_id: number
     amount: number
     pay: number
-    cancelled: number
+    cancelled: string
     payment_date: string
     due_date: string
 }

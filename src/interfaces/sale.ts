@@ -6,5 +6,5 @@ export default interface Sale extends Model {
     pay: number
     amount: number
     commentary: string
-    cancelled: number
+    cancelled: string
 }
