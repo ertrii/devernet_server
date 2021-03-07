@@ -5,6 +5,20 @@ type Query {
     brands: [Brand]
     product(id: ID!): Product
     products: [Product]
+    antenna(id: ID!): Antenna
+    antennas: [Antenna]
+    service(id: ID!): Service
+    services: [Service]
+    instalation(id: ID!): Instalation
+    instalations: [Instalation]
+    client(id: ID!): Client
+    clients: [Client]
+    service_payment(id: ID!): ServicePayment
+    service_payments: [ServicePayment]
+    sale(id: ID!): Sale
+    sales: [Sale]
+    notice(id: ID!): Notice
+    notices: [Notice]
 }
 
 type Mutation {
@@ -19,6 +33,34 @@ type Mutation {
     create_product(into_product: IntoProduct!): Product
     update_product(id: ID!, into_product: IntoProduct!): Product
     delete_product(id: ID!): DataDeleted
+
+    create_antenna(into_antenna: IntoAntenna!): Antenna
+    update_antenna(id: ID!, into_antenna: IntoAntenna!): Antenna
+    delete_antenna(id: ID!): DataDeleted
+
+    create_service(into_service: IntoService!): Service
+    update_service(id: ID!, into_service: IntoService!): Service
+    delete_service(id: ID!): DataDeleted
+
+    create_instalation(into_instalation: IntoInstalation!): Instalation
+    update_instalation(id: ID!, into_instalation: IntoInstalation!): Instalation
+    delete_instalation(id: ID!): DataDeleted
+
+    create_client(into_client: IntoClient!): Client
+    update_client(id: ID!, into_client: IntoClient!): Client
+    delete_client(id: ID!): DataDeleted
+
+    create_service_payment(into_service_payment: IntoServicePayment!): ServicePayment
+    update_service_payment(id: ID!, into_service_payment: IntoServicePayment!): ServicePayment
+    delete_service_payment(id: ID!): DataDeleted
+
+    create_sale(into_sale: IntoSale!): Sale
+    update_sale(id: ID!, into_sale: IntoSale!): Sale
+    delete_sale(id: ID!): DataDeleted
+
+    create_notice(into_notice: IntoNotice!): Notice
+    update_notice(id: ID!, into_notice: IntoNotice!): Notice
+    delete_notice(id: ID!): DataDeleted
 }
 
 type DataDeleted {

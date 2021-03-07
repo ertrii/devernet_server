@@ -1,0 +1,21 @@
+type Sale {
+    id: ID!
+    client_id: ID
+    product_id: ID
+    pay: Float
+    amount: Float
+    commentary: String
+    cancelled: String
+    deleted: Boolean
+    created_at: String
+    updated_at: String
+}
+
+input IntoSale {
+    client_id: ID!
+    product_id: ID!
+    pay: Float!
+    amount: Float!
+    commentary: String
+    cancelled: String
+}

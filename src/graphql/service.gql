@@ -1,0 +1,17 @@
+type Service {
+    id: ID
+    name: String
+    pay: Float
+    megabytes: Int
+    description: String
+    deleted: Boolean
+    created_at: String
+    updated_at: String
+}
+
+input IntoService {
+    name: String!
+    pay: Float!
+    megabytes: Int!
+    description: String!
+}

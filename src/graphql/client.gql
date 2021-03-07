@@ -1,0 +1,15 @@
+type Client {
+    id: ID
+    user_id: ID
+    instalation_id: ID
+    active: Boolean
+    deleted: Boolean
+    created_at: String
+    updated_at: String
+}
+
+input IntoClient {
+    user_id: ID!
+    instalation_id: ID!
+    active: Boolean
+}

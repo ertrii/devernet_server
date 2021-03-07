@@ -1,0 +1,15 @@
+type Notice {
+    id: ID
+    title: String
+    textarea: String
+    user_id: Int
+    deleted: Boolean
+    created_at: String
+    updated_at: String
+}
+
+input IntoNotice {
+    title: String!
+    textarea: String!
+    user_id: ID!
+}

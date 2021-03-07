@@ -8,7 +8,19 @@ const resolvers: IResolvers = {
     Query,
     Mutation
 }
-const filename_graphql: string[] = ['index', 'user', 'brand', 'product']
+const filename_graphql: string[] = [
+    'index',
+    'user',
+    'brand',
+    'product',
+    'antenna',
+    'service',
+    'instalation',
+    'client',
+    'service_payment',
+    'sale',
+    'notice'
+]
 
 const typeDefs: Array<DocumentNode> = []
 for (const fieldname of filename_graphql) {

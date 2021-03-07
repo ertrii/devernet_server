@@ -1,0 +1,13 @@
+type Antenna {
+    id: ID
+    product_id: ID
+    mac: String
+    deleted: Boolean
+    created_at: String
+    updated_at: String
+}
+
+input IntoAntenna {
+    product_id: ID!
+    mac: String!
+}

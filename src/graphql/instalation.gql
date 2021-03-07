@@ -1,0 +1,19 @@
+type Instalation {
+    id: ID
+    antenna_id: ID
+    service_id: ID
+    user_id: ID
+    ip: String
+    commentary: String
+    deleted: Boolean
+    created_at: String
+    updated_at: String
+}
+
+input IntoInstalation {
+    antenna_id: ID!
+    service_id: ID!
+    user_id: ID!
+    ip: String!
+    commentary: String
+}
