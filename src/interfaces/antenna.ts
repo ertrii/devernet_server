@@ -1,7 +1,6 @@
 import { Model } from '../config/types'
 
-export default interface antenna extends Model {
-    name: string
+export default interface Antenna extends Model {
     product_id: number
     mac: number
 }
